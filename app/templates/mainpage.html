@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends "basepage.html" %}
+
+{% block page_content %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-9 col-md-offset-1" role="main">
+      <form action='/woop' method="POST">
+        <div class="form-group">
+          <h4>Wish(愿望)</h4>
+          <p class="text-primary">你内心一直想去实现的愿望是什么？</p>
+          <p class="text-info">目标/愿望应是可实现且有挑战的。</p>
+          <textarea class="form-control" rows="2" name="wish"></textarea>
+          <p class="text-primary">你打算何时实现？</p>
+          <input type="datetime-local" name="due_time">
+        </div>
+        <div class="form-group">
+          <h4>Outcome(结果)</h4>
+          <p class="text-primary">实现以上愿望后，你能想到的最好结果是什么?你的心情如何？</p>
+          <p class="text-info">图景越清晰越好。来，闭上眼，好好想象下。</p>
+          <textarea class="form-control" rows="2" name="outcome"></textarea>
+        </div>
+        <h4>Obstacle(困难)</h4>
+        <p class="text-primary">为了实现你的愿望，你会遇到什么困难？列个清单吧（至少四项）</p>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon" id="obs0_NO">1. </span>
+            <input type="text" class="form-control" placeholder="懒" name="obs0" id="obs0" aria-describedby="obs0">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon" id="obs1_NO">2. </span>
+            <input type="text" class="form-control" placeholder="懒" name="obs1" id="obs1" aria-describedby="obs1">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon" id="obs2_NO">3. </span>
+            <input type="text" class="form-control" placeholder="懒" name="obs2" id="obs2" aria-describedby="obs2">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon" id="obs3_N">4. </span>
+            <input type="text" class="form-control" placeholder="懒" name="obs3" id="obs3" aria-describedby="obs3">
+          </div>
+        </div>
+        <h4>Plan(应对)</h4>
+        <div class="form-group">
+          <label for="if0">如果</label>
+          <input type="text" class="form-control" name="if0" id="if0" placeholder="时间地点等具体情况">
+        </div>
+        <div class="form-group">
+          <label for="then0">那么</label>
+          <input type="text" class="form-control" name="then0" id="then0" placeholder="你将做什么来实现愿望">
+        </div>
+        <div class="form-group">
+          <label for="if1">如果</label>
+          <input type="text" class="form-control" name="if1" id="if1" placeholder="时间地点等具体情况">
+        </div>
+        <div class="form-group">
+          <label for="then1">那么</label>
+          <input type="text" class="form-control" name="then1" id="then1" placeholder="你将做什么来实现愿望">
+        </div>
+        <div class="form-group">
+          <label for="if2">如果</label>
+          <input type="text" class="form-control" name="if2" id="if2" placeholder="时间地点等具体情况">
+        </div>
+        <div class="form-group">
+          <label for="then2">那么</label>
+          <input type="text" class="form-control" name="then2" id="then2" placeholder="你将做什么来实现愿望">
+        </div>
+        <div class="form-group">
+          <label for="if3">如果</label>
+          <input type="text" class="form-control" name="if3" id="if3" placeholder="时间地点等具体情况">
+        </div>
+        <div class="form-group">
+          <label for="then3">那么</label>
+          <input type="text" class="form-control" name="then3" id="then3" placeholder="你将做什么来实现愿望">
+        </div>
+        <button type="submit" class="btn btn-success">提交WOOP</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
